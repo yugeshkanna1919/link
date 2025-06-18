@@ -1,8 +1,30 @@
-<!-- filepath: D:\shackathon\fullstack\index.html -->
 <!DOCTYPE html>
 <html>
 <head>
   <title>My App</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th {
+      background-color: #061b2d;
+      color: white;
+      padding: 16px;
+    }
+    td {
+      background-color: #E3F2FD;
+      color: #222;
+      padding: 8px;
+    }
+    tr:nth-child(even) td {
+      background-color: #BBDEFB;
+    }
+    div {
+      background: #2196F3;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
   <h1>Hello, World!</h1>
@@ -13,6 +35,23 @@
   <h6>yugesh kanna</h6>
   <p>If you see this <br>your page is working.</p>
   <img src="ironman.jpg" alt="ironman.img" width="100px"  height="100px">
-  <a href="https://www.google.com" target="_blank">Google</a></body>
+  <br>
+  <a href="https://www.google.com" target="_blank">Google</a>
+  <!-- Combined: Box containing your table -->
+  <div style="width:300px; padding:16px;">
+    <table border="1">
+      <tr>
+        <th colspan="1">Name</th>
+        <th colspan="1">Marks</th>
+        <th colspan="1">Age</th>
+      </tr>
+      <tr>
+        <td rowspan="2">yugeshkanna</td>
+        <td>India</td>
+        <td>20</td>
+      </tr>
+    </table>
+  </div>
+  <a href="postion.html">Go to Postion 
 </body>
 </html>
