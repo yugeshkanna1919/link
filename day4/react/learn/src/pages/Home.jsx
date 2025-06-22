@@ -1,9 +1,7 @@
-import './Home.css'
-
 const Home = () => {
   return (
-    <div className="home-container">
-      <h1> Wellcome to this page </h1>
+    <div>
+        <h1>hi this is home Page  </h1>
     </div>
   )
 }

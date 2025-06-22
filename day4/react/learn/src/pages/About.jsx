@@ -1,17 +1,22 @@
-import State from '../../hooks/State';
-import Effect from '../../hooks/Effect';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../hooks/Usercontext";
 const About = () => {
-  return (
-    <div>
-        <h1>About Page</h1>
-        <Link to='/state'>UserState Example</Link>
-        <br />
-        <Link to='/form'>Form Example</Link>
-        <br />
-        <Link to='/Effect'>Effect</Link>
-    </div>
-  )
+    const name= useContext(UserContext).name;
+    return (
+        <div>
+            <h1>About Page</h1>
+            <h1>Hello! {name}</h1>
+            <Link to="/state">Use state Example</Link>
+            <br />
+            <Link to="/form">Controlled Form</Link>
+            <br />
+            <Link to="/effect">Use Effect Example</Link>
+            <br />
+            <Link to="/reducer">Use Reducer Example</Link>
+            <br />
+        </div>
+    );
 }
 
-export default About
+export default About;
