@@ -1,0 +1,137 @@
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  min-height: 100vh;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.featured-foods,
+.restaurants {
+  padding: 4rem 0;
+  width: 100%;
+}
+
+.featured-foods {
+  background: #f8f9fa;
+}
+
+.restaurants {
+  background: white;
+}
+
+.featured-foods h2,
+.restaurants h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+  position: relative;
+  font-weight: bold;
+}
+
+.featured-foods h2::after,
+.restaurants h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+.foods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .foods-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .restaurants-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Medium screens */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .foods-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .restaurants-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .featured-foods,
+  .restaurants {
+    padding: 2rem 0;
+  }
+  
+  .featured-foods h2,
+  .restaurants h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .foods-grid,
+  .restaurants-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  .featured-foods h2,
+  .restaurants h2 {
+    font-size: 1.8rem;
+  }
+}
